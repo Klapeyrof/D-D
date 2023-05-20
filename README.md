@@ -8,4 +8,4 @@
 
 Пример генерации для width = 110, height = 40, difficulty = 5, size_coefficient = 0.2, count_rooms = 10, count_trails = 50 :
 
-![image](https://github.com/Klapeyrof/D-D/assets/113589355/eea7fc55-b97c-4eab-989e-4ef7808c07cb)
+![image](https://github.com/Klapeyrof/D-D/assets/113589355/a6c217fd-a728-41c3-9650-43329a844a4c)
