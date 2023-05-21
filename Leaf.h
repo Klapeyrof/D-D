@@ -12,6 +12,7 @@ using namespace std;
 #include "Chars.h"
 
 
+
 class Leaf {
 protected:
     Chars C;
@@ -19,7 +20,9 @@ protected:
     int _difficulty;
     float _size_coefficient;
     int _traps, _monsters, _chests, _smth, _count_rooms, _count_trails;
-    array<array<char, 200>, 600> _map;
+
+    vector<vector<char>> _map;
+    //array<array<char, 200>, 600> _map;
     vector<Room> _Rooms;
     int person_coord_x;
     int person_coord_y;

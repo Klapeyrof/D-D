@@ -26,12 +26,21 @@ Leaf::Leaf(Chars C, const int Width, int Height, int Difficulty, float Size_coef
     this->_count_trails = Count_trails;
 
 
-    //Заполняем массив символами стены
-    for (int i = 0; i < _height; i++) {
-        for (int j = 0; j < _width; j++) {
-            this->_map[i][j] = C.char_wall;
-        }
+    //Заполняем массив символами стены (Через вектор)
+    vector<char> Stripe;
+    for (int j = 0; j < _width; j++) {
+        Stripe.push_back(C.char_wall);
     }
+    for (int i = 0; i < _height; i++) {
+        _map.push_back(Stripe);
+    }
+
+    //Заполняем массив символами стены (через array)
+//    for (int i = 0; i < _height; i++) {
+//        for (int j = 0; j < _width; j++) {
+//            this->_map[i][j] = C.char_wall;
+//        }
+//    }
 
     //Рандомное кол-во вещей от 1 + сложность до сложности *3
     random_device dev;
@@ -102,13 +111,23 @@ Leaf::Leaf(Chars C, const int Width, int Height, int Difficulty, float Size_coef
 }
 
 void Leaf::getMap() {
-    for (int i = 0; i < _height; i++) {
-        cout << "  ";
-        for (int j = 0; j < _width; j++) {
-            cout << _map[i][j];
+    for(auto string:_map){
+        for(auto symbol:string){
+            cout << symbol;
         }
         cout << endl;
     }
+
+//
+//
+//    for (int i = 0; i < _height; i++) {
+//        cout << "  ";
+//        for (int j = 0; j < _width; j++) {
+//            cout << _map[i][j];
+//        }
+//        cout << endl;
+//    }
+
     cout << endl << endl << endl;
 }
 

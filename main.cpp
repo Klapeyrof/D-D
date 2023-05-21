@@ -19,7 +19,9 @@ bool isNumeric(std::string const &str)
     return !str.empty() && str.find_first_not_of("0123456789.") == std::string::npos;
 }
 
+
 int main() {
+
 
     //Считывание данных из файла
     string String;
@@ -31,7 +33,8 @@ int main() {
     int count_trails;       //Количество троп
 
     ifstream ReadOn;
-    ReadOn.open("C://Users//boldi//Documents//D-D//D-D_parametrs.txt");
+    ReadOn.open("..//D-D_parametrs.txt");
+
 
     //Поиск width
     ReadOn >> String;
